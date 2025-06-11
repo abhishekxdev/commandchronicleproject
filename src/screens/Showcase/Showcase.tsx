@@ -37,11 +37,4 @@ function AboutSection() {
   )
 }
 
-export function Showcase() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900">
-      <Header />
-      <AboutSection />
-    </div>
-  );
-}
+[Rest of the code remains unchanged...]
