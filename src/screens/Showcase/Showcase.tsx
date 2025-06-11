@@ -583,6 +583,92 @@ export const Showcase = (): JSX.Element => {
                   <div className="absolute bottom-0 left-0 right-0 h-40 sm:h-48 md:h-56 bg-gradient-to-t from-[#272724] via-[#272724]/80 to-transparent rounded-b-lg pointer-events-none" />
                 </div>
               </div>
+
+              {/* Task card - hidden on mobile and small tablets */}
+              <Card className="hidden lg:block px-2.5 py-[5px] top-[483px] right-8 border border-solid border-[#272724] absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
+                <CardContent className="p-0">
+                  <div className="flex w-[204px] items-center gap-[67px] relative flex-[0_0_auto]">
+                    <div className="w-[114px] items-center gap-[11px] flex relative">
+                      <img
+                        className="relative w-5 h-5"
+                        alt="Icon backlog"
+                        src="/icon---backlog.svg"
+                      />
+                      <span className="relative w-fit [font-family:'Inter',Helvetica] font-medium text-[#e6e7d5] text-sm tracking-[0] leading-[normal]">
+                        UI skeleton
+                      </span>
+                    </div>
+                    <div className="inline-flex items-start relative flex-[0_0_auto]">
+                      <img
+                        className="ml-[-1.00px] relative w-4 h-4 mt-[-1.00px] mb-[-1.00px] object-cover"
+                        alt="Rectangle"
+                        src="/rectangle-8.png"
+                      />
+                      <img
+                        className="mr-[-1.00px] ml-[-5px] relative w-4 h-4 mt-[-1.00px] mb-[-1.00px] object-cover"
+                        alt="Rectangle"
+                        src="/rectangle-7.png"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex w-[204px] items-center justify-end gap-2.5 relative flex-[0_0_auto]">
+                    <div className="flex w-[174px] items-start gap-1 relative ml-[-2.00px]">
+                      <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[3px] relative flex-[0_0_auto] bg-[#343431] rounded overflow-hidden">
+                        <div className="relative w-3 h-3 bg-[#c296fb] rounded-sm" />
+                        <span className="relative w-fit mt-[-1.00px] [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[10px] tracking-[0] leading-[normal] whitespace-nowrap">
+                          Team
+                        </span>
+                      </Badge>
+                      <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[3px] relative flex-[0_0_auto] bg-[#343431] rounded overflow-hidden">
+                        <span className="relative w-fit mt-[-1.00px] [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[10px] tracking-[0] leading-[normal] whitespace-nowrap">
+                          Project
+                        </span>
+                      </Badge>
+                    </div>
+                    <img
+                      className="relative w-[22px] h-[20.5px]"
+                      alt="Icon urgancy"
+                      src="/icon---urgancy.svg"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Comment card (Cassandra) - hidden on mobile and small tablets */}
+              <Card className="hidden lg:block p-2.5 top-[432px] left-8 absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
+                <CardContent className="p-0">
+                  <div className="flex-col items-end gap-3 self-stretch w-full flex-[0_0_auto] flex relative">
+                    <div className="flex w-[239px] items-center justify-between relative flex-[0_0_auto]">
+                      <div className="inline-flex items-center gap-2 relative flex-[0_0_auto]">
+                        <Avatar className="relative w-6 h-6 mt-[-2.00px] mb-[-2.00px] ml-[-2.00px]">
+                          <AvatarImage src="/ellipse-5.png" alt="Cassandra" />
+                        </Avatar>
+                        <span className="relative w-[75px] [font-family:'Inter',Helvetica] font-medium text-[#e6e7d5] text-sm tracking-[0] leading-[normal]">
+                          Cassandra
+                        </span>
+                      </div>
+                      <img
+                        className="relative w-5 h-5"
+                        alt="Icon add plus"
+                        src="/icon---add-plus.svg"
+                      />
+                    </div>
+                    <p className="relative w-[239px] [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-xs tracking-[0] leading-[normal]">
+                      streamlines project management and collaboration, boosting team
+                      productivity
+                    </p>
+                    <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[3px] relative flex-[0_0_auto] bg-[#343431] rounded overflow-hidden">
+                      <span className="relative w-fit mt-[-1.00px] [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[10px] tracking-[0] leading-[normal] whitespace-nowrap">
+                        Comment
+                      </span>
+                    </Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Main gradient overlay for overall page fade effect */}
+              <div className="absolute w-full h-full top-0 left-0 [background:linear-gradient(180deg,rgba(40,40,37,0)_74%,rgba(40,40,37,1)_100%)] pointer-events-none" />
             </div>
           </section>
         </div>
