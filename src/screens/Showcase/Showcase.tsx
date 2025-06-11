@@ -653,8 +653,7 @@ export const Showcase = (): JSX.Element => {
                       />
                     </div>
                     <p className="relative w-[239px] [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-xs tracking-[0] leading-[normal]">
-                      streamlines project management and collaboration, boosting team
-                      productivity
+                      streamlines your terminal history in just few clicks
                     </p>
                     <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[3px] relative flex-[0_0_auto] bg-[#343431] rounded overflow-hidden">
                       <span className="relative w-fit mt-[-1.00px] [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[10px] tracking-[0] leading-[normal] whitespace-nowrap">
