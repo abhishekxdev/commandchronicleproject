@@ -431,7 +431,7 @@ function Footer() {
   return (
     <footer className="relative z-10 px-4 sm:px-6 py-16 sm:py-20 bg-[#23231f] text-[#ecebdc]">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12 items-start">
           {/* Tagline Column */}
           <div className="md:col-span-1 flex items-start">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight text-left">
@@ -456,34 +456,32 @@ function Footer() {
             </div>
           </div>
 
-          {/* About + Social + Hiring Column */}
+          {/* Navigation Links Column */}
           <div className="md:col-span-1">
-            <div className="flex flex-col gap-6">
-              <div>
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-4">
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-normal">About</a>
-                  <button 
-                    onClick={() => scrollToSection('pricing')}
-                    className="text-gray-400 hover:text-white transition-colors text-sm font-normal"
-                  >
-                    Pricing
-                  </button>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-normal">Blog</a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-normal">Contact us</a>
-                  <button className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium rounded-md transition-colors ml-2">
-                    <span>🔥</span>
-                    We're hiring!
-                  </button>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-4 text-left">Social media</h3>
-                <div className="flex flex-wrap gap-x-4 gap-y-2">
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-normal">Instagram</a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-normal">Github</a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-normal">Linkedin</a>
-                </div>
-              </div>
+            <div className="space-y-4">
+              <a href="#" className="block text-gray-400 hover:text-white transition-colors text-sm font-normal">About</a>
+              <button 
+                onClick={() => scrollToSection('pricing')}
+                className="block text-gray-400 hover:text-white transition-colors text-sm font-normal text-left"
+              >
+                Pricing
+              </button>
+              <a href="#" className="block text-gray-400 hover:text-white transition-colors text-sm font-normal">Blog</a>
+              <a href="#" className="block text-gray-400 hover:text-white transition-colors text-sm font-normal">Contact us</a>
+              <button className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium rounded-md transition-colors">
+                <span>🔥</span>
+                We're hiring!
+              </button>
+            </div>
+          </div>
+
+          {/* Social Media Column */}
+          <div className="md:col-span-1">
+            <h3 className="text-lg font-bold text-white mb-4 text-left">Social media</h3>
+            <div className="space-y-4">
+              <a href="#" className="block text-gray-400 hover:text-white transition-colors text-sm font-normal">Instagram</a>
+              <a href="#" className="block text-gray-400 hover:text-white transition-colors text-sm font-normal">Github</a>
+              <a href="#" className="block text-gray-400 hover:text-white transition-colors text-sm font-normal">Linkedin</a>
             </div>
           </div>
         </div>
