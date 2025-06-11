@@ -593,7 +593,7 @@ export const Showcase = (): JSX.Element => {
                         src="/icon---backlog.svg"
                       />
                       <span className="relative w-fit [font-family:'Inter',Helvetica] font-medium text-[#e6e7d5] text-sm tracking-[0] leading-[normal]">
-                        UI skeleton
+                        Terminal ++
                       </span>
                     </div>
                     <div className="inline-flex items-start relative flex-[0_0_auto]">
