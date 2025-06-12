@@ -505,12 +505,12 @@ export const Showcase = (): JSX.Element => {
     <div className="min-h-screen bg-[#272724]">
       {/* Full-width clean background */}
       <div className="w-full min-h-screen relative overflow-hidden">
-        {/* Grid Background for Hero Section and Nav Bar */}
-        <div className="absolute inset-0 grid grid-cols-8 grid-rows-5 gap-0 pointer-events-none z-0">
+        {/* Enhanced Grid Background for Hero Section and Nav Bar - More visible on mobile */}
+        <div className="absolute inset-0 grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 grid-rows-5 gap-0 pointer-events-none z-0">
           {Array.from({ length: 40 }).map((_, i) => (
             <div
               key={i}
-              className="border border-[#4a4a45]/30"
+              className="border border-[#4a4a45]/50 sm:border-[#4a4a45]/40 md:border-[#4a4a45]/30"
             />
           ))}
         </div>
@@ -549,26 +549,112 @@ export const Showcase = (): JSX.Element => {
                   CommandChronicles is your encrypted, cross-device command log. Search, sync, and understand your CLI history like never before — with full context and total control.
                 </p>
 
-                {/* CTA Buttons - responsive spacing and sizing */}
+                {/* CTA Buttons - smaller and more responsive */}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 md:mb-20">
                   <Button 
                     onClick={handleRequestDemo}
-                    className="bg-[#ff5800] hover:bg-[#e64f00] transition-colors duration-200 px-6 py-3 sm:px-8 sm:py-4 rounded-lg h-auto w-full sm:w-auto"
+                    className="bg-[#ff5800] hover:bg-[#e64f00] transition-colors duration-200 px-4 py-2 sm:px-6 sm:py-3 rounded-lg h-auto w-full sm:w-auto text-sm sm:text-base"
                   >
-                    <span className="font-desktop-h3 font-[number:var(--desktop-h3-font-weight)] text-[#e6e7d5] text-sm sm:text-base md:text-lg tracking-[var(--desktop-h3-letter-spacing)] leading-[var(--desktop-h3-line-height)] [font-style:var(--desktop-h3-font-style)]">
+                    <span className="font-desktop-h3 font-[number:var(--desktop-h3-font-weight)] text-[#e6e7d5] tracking-[var(--desktop-h3-letter-spacing)] leading-[var(--desktop-h3-line-height)] [font-style:var(--desktop-h3-font-style)]">
                       Request Demo
                     </span>
                   </Button>
                   <Button 
                     onClick={handleLearnMore}
-                    className="bg-[#1e1e1c] hover:bg-[#2a2a27] transition-colors duration-200 px-6 py-3 sm:px-8 sm:py-4 rounded-lg h-auto w-full sm:w-auto"
+                    className="bg-[#1e1e1c] hover:bg-[#2a2a27] transition-colors duration-200 px-4 py-2 sm:px-6 sm:py-3 rounded-lg h-auto w-full sm:w-auto text-sm sm:text-base"
                   >
-                    <span className="font-desktop-h3 font-[number:var(--desktop-h3-font-weight)] text-[#e6e7d5] text-sm sm:text-base md:text-lg tracking-[var(--desktop-h3-letter-spacing)] leading-[var(--desktop-h3-line-height)] [font-style:var(--desktop-h3-font-style)]">
+                    <span className="font-desktop-h3 font-[number:var(--desktop-h3-font-weight)] text-[#e6e7d5] tracking-[var(--desktop-h3-letter-spacing)] leading-[var(--desktop-h3-line-height)] [font-style:var(--desktop-h3-font-style)]">
                       Learn more
                     </span>
                   </Button>
                 </div>
               </div>
+
+              {/* Mobile Cards - Show above terminal preview on mobile */}
+              <div className="relative z-10 flex flex-col sm:hidden gap-4 px-4 mb-8">
+                {/* Task card - visible on mobile */}
+                <Card className="px-2.5 py-[5px] border border-solid border-[#272724] bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
+                  <CardContent className="p-0">
+                    <div className="flex w-full items-center justify-between relative">
+                      <div className="flex items-center gap-[11px]">
+                        <img
+                          className="relative w-5 h-5"
+                          alt="Icon backlog"
+                          src="/icon---backlog.svg"
+                        />
+                        <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#e6e7d5] text-sm tracking-[0] leading-[normal]">
+                          Terminal ++
+                        </span>
+                      </div>
+                      <div className="inline-flex items-start">
+                        <img
+                          className="ml-[-1.00px] relative w-4 h-4 mt-[-1.00px] mb-[-1.00px] object-cover"
+                          alt="Rectangle"
+                          src="/rectangle-8.png"
+                        />
+                        <img
+                          className="mr-[-1.00px] ml-[-5px] relative w-4 h-4 mt-[-1.00px] mb-[-1.00px] object-cover"
+                          alt="Rectangle"
+                          src="/rectangle-7.png"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex w-full items-center justify-end gap-2.5 relative mt-2">
+                      <div className="flex items-start gap-1">
+                        <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[3px] bg-[#343431] rounded overflow-hidden">
+                          <div className="relative w-3 h-3 bg-[#c296fb] rounded-sm" />
+                          <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[10px] tracking-[0] leading-[normal] whitespace-nowrap">
+                            Team
+                          </span>
+                        </Badge>
+                        <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[3px] bg-[#343431] rounded overflow-hidden">
+                          <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[10px] tracking-[0] leading-[normal] whitespace-nowrap">
+                            Project
+                          </span>
+                        </Badge>
+                      </div>
+                      <img
+                        className="relative w-[22px] h-[20.5px]"
+                        alt="Icon urgancy"
+                        src="/icon---urgancy.svg"
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Comment card (Cassandra) - visible on mobile */}
+                <Card className="p-2.5 bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
+                  <CardContent className="p-0">
+                    <div className="flex-col items-end gap-3 self-stretch w-full flex">
+                      <div className="flex w-full items-center justify-between">
+                        <div className="inline-flex items-center gap-2">
+                          <Avatar className="relative w-6 h-6">
+                            <AvatarImage src="/ellipse-5.png" alt="Cassandra" />
+                          </Avatar>
+                          <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#e6e7d5] text-sm tracking-[0] leading-[normal]">
+                            Cassandra
+                          </span>
+                        </div>
+                        <img
+                          className="relative w-5 h-5"
+                          alt="Icon add plus"
+                          src="/icon---add-plus.svg"
+                        />
+                      </div>
+                      <p className="relative w-full [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-xs tracking-[0] leading-[normal]">
+                        streamlines your terminal history in just few clicks
+                      </p>
+                      <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[3px] bg-[#343431] rounded overflow-hidden self-start">
+                        <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[10px] tracking-[0] leading-[normal] whitespace-nowrap">
+                          Comment
+                        </span>
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
               {/* Dashboard image - properly positioned with responsive sizing and blur effect */}
               <div className="relative z-10 flex justify-center px-4">
                 <div className="relative w-full max-w-[1200px]">
@@ -582,8 +668,8 @@ export const Showcase = (): JSX.Element => {
                 </div>
               </div>
 
-              {/* Task card - hidden on mobile and small tablets */}
-              <Card className="hidden lg:block px-2.5 py-[5px] top-[483px] right-8 border border-solid border-[#272724] absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
+              {/* Task card - hidden on mobile, visible on larger screens */}
+              <Card className="hidden sm:block px-2.5 py-[5px] top-[483px] right-8 border border-solid border-[#272724] absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
                 <CardContent className="p-0">
                   <div className="flex w-[204px] items-center gap-[67px] relative flex-[0_0_auto]">
                     <div className="w-[114px] items-center gap-[11px] flex relative">
@@ -633,8 +719,8 @@ export const Showcase = (): JSX.Element => {
                 </CardContent>
               </Card>
 
-              {/* Comment card (Cassandra) - hidden on mobile and small tablets */}
-              <Card className="hidden lg:block p-2.5 top-[432px] left-8 absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
+              {/* Comment card (Cassandra) - hidden on mobile, visible on larger screens */}
+              <Card className="hidden sm:block p-2.5 top-[432px] left-8 absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
                 <CardContent className="p-0">
                   <div className="flex-col items-end gap-3 self-stretch w-full flex-[0_0_auto] flex relative">
                     <div className="flex w-[239px] items-center justify-between relative flex-[0_0_auto]">
