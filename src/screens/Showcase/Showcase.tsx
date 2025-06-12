@@ -553,7 +553,7 @@ export const Showcase = (): JSX.Element => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 md:mb-20">
                   <Button 
                     onClick={handleRequestDemo}
-                    className="bg-[#ff5800] hover:bg-[#e64f00] transition-colors duration-200 px-4 py-2 sm:px-6 sm:py-3 rounded-lg h-auto w-full sm:w-auto text-sm sm:text-base"
+                    className="bg-[#ff5800] hover:bg-[#e64f00] transition-colors duration-200 px-3 py-2 sm:px-4 sm:py-2 rounded-lg h-auto w-32 sm:w-auto text-sm"
                   >
                     <span className="font-desktop-h3 font-[number:var(--desktop-h3-font-weight)] text-[#e6e7d5] tracking-[var(--desktop-h3-letter-spacing)] leading-[var(--desktop-h3-line-height)] [font-style:var(--desktop-h3-font-style)]">
                       Request Demo
@@ -561,7 +561,7 @@ export const Showcase = (): JSX.Element => {
                   </Button>
                   <Button 
                     onClick={handleLearnMore}
-                    className="bg-[#1e1e1c] hover:bg-[#2a2a27] transition-colors duration-200 px-4 py-2 sm:px-6 sm:py-3 rounded-lg h-auto w-full sm:w-auto text-sm sm:text-base"
+                    className="bg-[#1e1e1c] hover:bg-[#2a2a27] transition-colors duration-200 px-3 py-2 sm:px-4 sm:py-2 rounded-lg h-auto w-32 sm:w-auto text-sm"
                   >
                     <span className="font-desktop-h3 font-[number:var(--desktop-h3-font-weight)] text-[#e6e7d5] tracking-[var(--desktop-h3-letter-spacing)] leading-[var(--desktop-h3-line-height)] [font-style:var(--desktop-h3-font-style)]">
                       Learn more
@@ -570,86 +570,86 @@ export const Showcase = (): JSX.Element => {
                 </div>
               </div>
 
-              {/* Mobile Cards - Show above terminal preview on mobile */}
-              <div className="relative z-10 flex flex-col sm:hidden gap-4 px-4 mb-8">
-                {/* Task card - visible on mobile */}
-                <Card className="px-2.5 py-[5px] border border-solid border-[#272724] bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
+              {/* Mobile Cards - Show above terminal preview on mobile - Side by side layout */}
+              <div className="relative z-10 flex sm:hidden gap-3 px-4 mb-8 justify-center">
+                {/* Comment card (Cassandra) - Left side on mobile */}
+                <Card className="p-2 bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a] flex-1 max-w-[180px]">
                   <CardContent className="p-0">
-                    <div className="flex w-full items-center justify-between relative">
-                      <div className="flex items-center gap-[11px]">
+                    <div className="flex-col gap-2 w-full flex">
+                      <div className="flex w-full items-center justify-between">
+                        <div className="inline-flex items-center gap-1">
+                          <Avatar className="relative w-5 h-5">
+                            <AvatarImage src="/ellipse-5.png" alt="Cassandra" />
+                          </Avatar>
+                          <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#e6e7d5] text-xs tracking-[0] leading-[normal]">
+                            Cassandra
+                          </span>
+                        </div>
                         <img
-                          className="relative w-5 h-5"
+                          className="relative w-4 h-4"
+                          alt="Icon add plus"
+                          src="/icon---add-plus.svg"
+                        />
+                      </div>
+                      <p className="relative w-full [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[10px] tracking-[0] leading-[normal]">
+                        streamlines project management and collaboration, boosting team productivity
+                      </p>
+                      <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[2px] bg-[#343431] rounded overflow-hidden self-start">
+                        <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[9px] tracking-[0] leading-[normal] whitespace-nowrap">
+                          Comment
+                        </span>
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Task card - Right side on mobile */}
+                <Card className="px-2 py-1 border border-solid border-[#272724] bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a] flex-1 max-w-[180px]">
+                  <CardContent className="p-0">
+                    <div className="flex w-full items-center justify-between relative mb-1">
+                      <div className="flex items-center gap-2">
+                        <img
+                          className="relative w-4 h-4"
                           alt="Icon backlog"
                           src="/icon---backlog.svg"
                         />
-                        <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#e6e7d5] text-sm tracking-[0] leading-[normal]">
-                          Terminal ++
+                        <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#e6e7d5] text-xs tracking-[0] leading-[normal]">
+                          UI skeleton
                         </span>
                       </div>
                       <div className="inline-flex items-start">
                         <img
-                          className="ml-[-1.00px] relative w-4 h-4 mt-[-1.00px] mb-[-1.00px] object-cover"
+                          className="ml-[-1.00px] relative w-3 h-3 mt-[-1.00px] mb-[-1.00px] object-cover"
                           alt="Rectangle"
                           src="/rectangle-8.png"
                         />
                         <img
-                          className="mr-[-1.00px] ml-[-5px] relative w-4 h-4 mt-[-1.00px] mb-[-1.00px] object-cover"
+                          className="mr-[-1.00px] ml-[-3px] relative w-3 h-3 mt-[-1.00px] mb-[-1.00px] object-cover"
                           alt="Rectangle"
                           src="/rectangle-7.png"
                         />
                       </div>
                     </div>
 
-                    <div className="flex w-full items-center justify-end gap-2.5 relative mt-2">
+                    <div className="flex w-full items-center justify-end gap-1 relative">
                       <div className="flex items-start gap-1">
-                        <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[3px] bg-[#343431] rounded overflow-hidden">
-                          <div className="relative w-3 h-3 bg-[#c296fb] rounded-sm" />
-                          <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[10px] tracking-[0] leading-[normal] whitespace-nowrap">
+                        <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[2px] bg-[#343431] rounded overflow-hidden">
+                          <div className="relative w-2 h-2 bg-[#c296fb] rounded-sm" />
+                          <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[9px] tracking-[0] leading-[normal] whitespace-nowrap">
                             Team
                           </span>
                         </Badge>
-                        <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[3px] bg-[#343431] rounded overflow-hidden">
-                          <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[10px] tracking-[0] leading-[normal] whitespace-nowrap">
+                        <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[2px] bg-[#343431] rounded overflow-hidden">
+                          <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[9px] tracking-[0] leading-[normal] whitespace-nowrap">
                             Project
                           </span>
                         </Badge>
                       </div>
                       <img
-                        className="relative w-[22px] h-[20.5px]"
+                        className="relative w-4 h-4"
                         alt="Icon urgancy"
                         src="/icon---urgancy.svg"
                       />
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Comment card (Cassandra) - visible on mobile */}
-                <Card className="p-2.5 bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
-                  <CardContent className="p-0">
-                    <div className="flex-col items-end gap-3 self-stretch w-full flex">
-                      <div className="flex w-full items-center justify-between">
-                        <div className="inline-flex items-center gap-2">
-                          <Avatar className="relative w-6 h-6">
-                            <AvatarImage src="/ellipse-5.png" alt="Cassandra" />
-                          </Avatar>
-                          <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#e6e7d5] text-sm tracking-[0] leading-[normal]">
-                            Cassandra
-                          </span>
-                        </div>
-                        <img
-                          className="relative w-5 h-5"
-                          alt="Icon add plus"
-                          src="/icon---add-plus.svg"
-                        />
-                      </div>
-                      <p className="relative w-full [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-xs tracking-[0] leading-[normal]">
-                        streamlines your terminal history in just few clicks
-                      </p>
-                      <Badge className="inline-flex items-center justify-center gap-1 px-1 py-[3px] bg-[#343431] rounded overflow-hidden self-start">
-                        <span className="relative [font-family:'Inter',Helvetica] font-medium text-[#9c9c95] text-[10px] tracking-[0] leading-[normal] whitespace-nowrap">
-                          Comment
-                        </span>
-                      </Badge>
                     </div>
                   </CardContent>
                 </Card>
