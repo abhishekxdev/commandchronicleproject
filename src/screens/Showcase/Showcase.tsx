@@ -505,12 +505,12 @@ export const Showcase = (): JSX.Element => {
     <div className="min-h-screen bg-[#272724]">
       {/* Full-width clean background */}
       <div className="w-full min-h-screen relative overflow-hidden">
-        {/* Grid Background for Hero Section and Nav Bar - Optimized for laptop view */}
-        <div className="absolute inset-0 grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 grid-rows-6 gap-0 pointer-events-none z-0">
-          {Array.from({ length: 72 }).map((_, i) => (
+        {/* Grid Background - Exactly 8 columns and 5 rows */}
+        <div className="absolute inset-0 grid grid-cols-8 grid-rows-5 gap-0 pointer-events-none z-0">
+          {Array.from({ length: 40 }).map((_, i) => (
             <div
               key={i}
-              className="border border-[#4a4a45]/40 sm:border-[#4a4a45]/35 md:border-[#4a4a45]/30"
+              className="border border-[#4a4a45]/30"
             />
           ))}
         </div>
@@ -669,8 +669,8 @@ export const Showcase = (): JSX.Element => {
                 </div>
               </div>
 
-              {/* Task card - Positioned for laptop view */}
-              <Card className="hidden sm:block px-2.5 py-[5px] top-[450px] right-12 lg:right-16 xl:right-20 border border-solid border-[#272724] absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
+              {/* Task card - Positioned to avoid overlapping with terminal */}
+              <Card className="hidden sm:block px-2.5 py-[5px] top-[320px] right-8 lg:right-12 xl:right-16 border border-solid border-[#272724] absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
                 <CardContent className="p-0">
                   <div className="flex w-[204px] items-center gap-[67px] relative flex-[0_0_auto]">
                     <div className="w-[114px] items-center gap-[11px] flex relative">
@@ -720,8 +720,8 @@ export const Showcase = (): JSX.Element => {
                 </CardContent>
               </Card>
 
-              {/* Comment card (Cassandra) - Positioned for laptop view */}
-              <Card className="hidden sm:block p-2.5 top-[380px] left-12 lg:left-16 xl:left-20 absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
+              {/* Comment card (Cassandra) - Positioned to avoid overlapping with terminal */}
+              <Card className="hidden sm:block p-2.5 top-[280px] left-8 lg:left-12 xl:left-16 absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
                 <CardContent className="p-0">
                   <div className="flex-col items-end gap-3 self-stretch w-full flex-[0_0_auto] flex relative">
                     <div className="flex w-[239px] items-center justify-between relative flex-[0_0_auto]">
