@@ -518,20 +518,20 @@ export const Showcase = (): JSX.Element => {
         {/* Nav Bar and Hero Section */}
         <div className="relative isolate z-20">
           <Header />
-          <section className="relative w-full max-w-[1440px] mx-auto px-4 sm:px-6 z-20">
-            <div className="relative min-h-[1000px] pt-8 sm:pt-16">
+          <section className="relative w-full max-w-[1200px] mx-auto px-4 sm:px-6 z-20">
+            <div className="relative min-h-[800px] pt-8 sm:pt-12">
               {/* Main content - Hero Section */}
-              <div className="relative z-10 text-center pt-8 sm:pt-16 pb-8">
-                {/* Main heading - properly responsive */}
-                <h1 className="font-desktop-h1 font-[number:var(--desktop-h1-font-weight)] text-[#e6e7d5] tracking-[var(--desktop-h1-letter-spacing)] leading-tight [font-style:var(--desktop-h1-font-style)] mb-6
-                  text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+              <div className="relative z-10 text-center pt-6 sm:pt-12 pb-6">
+                {/* Main heading - optimized for laptop 100% zoom */}
+                <h1 className="font-desktop-h1 font-[number:var(--desktop-h1-font-weight)] text-[#e6e7d5] tracking-[var(--desktop-h1-letter-spacing)] leading-tight [font-style:var(--desktop-h1-font-style)] mb-4 sm:mb-6
+                  text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                   {/* First line with cursor at the end */}
-                  <div className="flex items-center justify-center flex-wrap gap-2 sm:gap-3 mb-2 sm:mb-4">
+                  <div className="flex items-center justify-center flex-wrap gap-2 sm:gap-3 mb-2 sm:mb-3">
                     <span>Master Your Terminal History</span>
                     <div className="relative inline-flex items-center flex-shrink-0">
-                      <div className="absolute w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] md:w-[29px] md:h-[29px] bg-[#343431] rounded-full" />
+                      <div className="absolute w-[16px] h-[16px] sm:w-[20px] sm:h-[20px] md:w-[24px] md:h-[24px] bg-[#343431] rounded-full" />
                       <img
-                        className="relative w-[21px] h-[21px] sm:w-[27px] sm:h-[27px] md:w-[32px] md:h-[32px] z-10"
+                        className="relative w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] z-10"
                         alt="Cursor"
                         src="/polygon-1.svg"
                       />
@@ -543,17 +543,17 @@ export const Showcase = (): JSX.Element => {
                   </div>
                 </h1>
 
-                {/* Description text - properly spaced and responsive */}
-                <p className="max-w-[668px] mx-auto px-4 font-desktop-p-large font-[number:var(--desktop-p-large-font-weight)] text-[#aeac93] text-center tracking-[var(--desktop-p-large-letter-spacing)] leading-relaxed [font-style:var(--desktop-p-large-font-style)] mb-8
-                  text-sm sm:text-base md:text-lg lg:text-xl">
+                {/* Description text - optimized sizing */}
+                <p className="max-w-[600px] mx-auto px-4 font-desktop-p-large font-[number:var(--desktop-p-large-font-weight)] text-[#aeac93] text-center tracking-[var(--desktop-p-large-letter-spacing)] leading-relaxed [font-style:var(--desktop-p-large-font-style)] mb-6 sm:mb-8
+                  text-sm sm:text-base md:text-lg">
                   CommandChronicles is your encrypted, cross-device command log. Search, sync, and understand your CLI history like never before — with full context and total control.
                 </p>
 
-                {/* CTA Buttons - smaller and more responsive */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 md:mb-20">
+                {/* CTA Buttons - optimized for laptop view */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12">
                   <Button 
                     onClick={handleRequestDemo}
-                    className="bg-[#ff5800] hover:bg-[#e64f00] transition-colors duration-200 px-3 py-2 sm:px-4 sm:py-2 rounded-lg h-auto w-32 sm:w-auto text-sm"
+                    className="bg-[#ff5800] hover:bg-[#e64f00] transition-colors duration-200 px-4 py-2 sm:px-6 sm:py-3 rounded-lg h-auto w-36 sm:w-auto text-sm sm:text-base"
                   >
                     <span className="font-desktop-h3 font-[number:var(--desktop-h3-font-weight)] text-[#e6e7d5] tracking-[var(--desktop-h3-letter-spacing)] leading-[var(--desktop-h3-line-height)] [font-style:var(--desktop-h3-font-style)]">
                       Request Demo
@@ -561,7 +561,7 @@ export const Showcase = (): JSX.Element => {
                   </Button>
                   <Button 
                     onClick={handleLearnMore}
-                    className="bg-[#1e1e1c] hover:bg-[#2a2a27] transition-colors duration-200 px-3 py-2 sm:px-4 sm:py-2 rounded-lg h-auto w-32 sm:w-auto text-sm"
+                    className="bg-[#1e1e1c] hover:bg-[#2a2a27] transition-colors duration-200 px-4 py-2 sm:px-6 sm:py-3 rounded-lg h-auto w-36 sm:w-auto text-sm sm:text-base"
                   >
                     <span className="font-desktop-h3 font-[number:var(--desktop-h3-font-weight)] text-[#e6e7d5] tracking-[var(--desktop-h3-letter-spacing)] leading-[var(--desktop-h3-line-height)] [font-style:var(--desktop-h3-font-style)]">
                       Learn more
@@ -570,8 +570,8 @@ export const Showcase = (): JSX.Element => {
                 </div>
               </div>
 
-              {/* Mobile Cards - Show above terminal preview on mobile - Side by side layout - Moved up */}
-              <div className="relative z-10 flex sm:hidden gap-3 px-4 mb-6 justify-center -mt-4">
+              {/* Mobile Cards - Show above terminal preview on mobile - Side by side layout */}
+              <div className="relative z-10 flex sm:hidden gap-3 px-4 mb-4 justify-center">
                 {/* Comment card (Cassandra) - Left side on mobile */}
                 <Card className="p-2 bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a] flex-1 max-w-[180px]">
                   <CardContent className="p-0">
@@ -655,21 +655,21 @@ export const Showcase = (): JSX.Element => {
                 </Card>
               </div>
 
-              {/* Dashboard image - properly positioned with responsive sizing and blur effect */}
+              {/* Dashboard image - optimized for laptop 100% zoom */}
               <div className="relative z-10 flex justify-center px-4">
-                <div className="relative w-full max-w-[1200px]">
+                <div className="relative w-full max-w-[900px]">
                   <img 
                     src="/ccr_demo.png" 
                     alt="CommandChronicles Terminal Demo" 
                     className="w-full h-auto rounded-lg shadow-2xl border border-[#343431]"
                   />
                   {/* Blur gradient overlay at the bottom of terminal */}
-                  <div className="absolute bottom-0 left-0 right-0 h-40 sm:h-48 md:h-56 bg-gradient-to-t from-[#272724] via-[#272724]/80 to-transparent rounded-b-lg pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 h-32 sm:h-40 bg-gradient-to-t from-[#272724] via-[#272724]/80 to-transparent rounded-b-lg pointer-events-none" />
                 </div>
               </div>
 
               {/* Task card - hidden on mobile, visible on larger screens */}
-              <Card className="hidden sm:block px-2.5 py-[5px] top-[483px] right-8 border border-solid border-[#272724] absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
+              <Card className="hidden sm:block px-2.5 py-[5px] top-[400px] right-8 border border-solid border-[#272724] absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
                 <CardContent className="p-0">
                   <div className="flex w-[204px] items-center gap-[67px] relative flex-[0_0_auto]">
                     <div className="w-[114px] items-center gap-[11px] flex relative">
@@ -720,7 +720,7 @@ export const Showcase = (): JSX.Element => {
               </Card>
 
               {/* Comment card (Cassandra) - hidden on mobile, visible on larger screens */}
-              <Card className="hidden sm:block p-2.5 top-[432px] left-8 absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
+              <Card className="hidden sm:block p-2.5 top-[350px] left-8 absolute bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a]">
                 <CardContent className="p-0">
                   <div className="flex-col items-end gap-3 self-stretch w-full flex-[0_0_auto] flex relative">
                     <div className="flex w-[239px] items-center justify-between relative flex-[0_0_auto]">
