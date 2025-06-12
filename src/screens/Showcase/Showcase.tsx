@@ -570,8 +570,8 @@ export const Showcase = (): JSX.Element => {
                 </div>
               </div>
 
-              {/* Mobile Cards - Show above terminal preview on mobile - Side by side layout */}
-              <div className="relative z-10 flex sm:hidden gap-3 px-4 mb-8 justify-center">
+              {/* Mobile Cards - Show above terminal preview on mobile - Side by side layout - Moved up */}
+              <div className="relative z-10 flex sm:hidden gap-3 px-4 mb-6 justify-center -mt-4">
                 {/* Comment card (Cassandra) - Left side on mobile */}
                 <Card className="p-2 bg-[#1e1e1c] rounded overflow-hidden shadow-[0px_4px_20px_#3b3c411a] flex-1 max-w-[180px]">
                   <CardContent className="p-0">
